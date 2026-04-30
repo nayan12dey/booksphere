@@ -15,7 +15,7 @@ const FeaturedBooks = async () => {
 
     return (
         <div className="my-10">
-            <h1 className="text-4xl font-bold text-center my-10">Featured Books</h1>
+            <h1 className="text-5xl font-bold text-center my-10">Featured Books</h1>
 
             <div className="grid grid-cols-4 mx-auto">
                 {
