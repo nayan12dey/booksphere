@@ -2,6 +2,7 @@ import Banner from "@/components/Banner";
 import BookMarquee from "@/components/BookMarquee";
 import BookStats from "@/components/BookStats";
 import FeaturedBooks from "@/components/FeaturedBooks";
+import Testimonials from "@/components/Testimonials";
 
 import Image from "next/image";
 
@@ -12,6 +13,7 @@ export default function Home() {
         <Banner></Banner>
         <FeaturedBooks></FeaturedBooks>
         <BookStats></BookStats>
+        <Testimonials></Testimonials>
     </div>
   );
 }
