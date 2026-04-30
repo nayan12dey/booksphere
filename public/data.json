@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "description": "A novel about racial injustice and moral growth in the American South.",
+        "category": "Story",
+        "available_quantity": 8,
+        "image_url": "https://i.ibb.co/RTf74Brv/book1.jpg"
+    },
+    {
+        "id": 2,
+        "title": "1984",
+        "author": "George Orwell",
+        "description": "A dystopian novel exploring totalitarianism and surveillance.",
+        "category": "Story",
+        "available_quantity": 10,
+        "image_url": "https://i.ibb.co/GQNv3Tj2/book2.jpg"
+    },
+    {
+        "id": 3,
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "description": "A story of wealth, love, and the American Dream in the 1920s.",
+        "category": "Story",
+        "available_quantity": 6,
+        "image_url": "https://i.ibb.co/62rvRxn/book3.jpg"
+    },
+    {
+        "id": 4,
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "description": "A philosophical tale about following one's dreams.",
+        "category": "Story",
+        "available_quantity": 12,
+        "image_url": "https://i.ibb.co/9kX9CSbD/book4.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Rich Dad Poor Dad",
+        "author": "Robert Kiyosaki",
+        "description": "A personal finance book that contrasts two financial mindsets.",
+        "category": "Tech",
+        "available_quantity": 9,
+        "image_url": "https://i.ibb.co/LzLfnLp5/book5.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "description": "A guide to building good habits and breaking bad ones.",
+        "category": "Science",
+        "available_quantity": 11,
+        "image_url": "https://i.ibb.co/FkB6fDkP/book6.jpg"
+    },
+    {
+        "id": 7,
+        "title": "The Pragmatic Programmer",
+        "author": "Andrew Hunt & David Thomas",
+        "description": "A classic book for software developers on best practices.",
+        "category": "Tech",
+        "available_quantity": 7,
+        "image_url": "https://i.ibb.co/8nvWVGYm/book7.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Clean Code",
+        "author": "Robert C. Martin",
+        "description": "A handbook of agile software craftsmanship.",
+        "category": "Tech",
+        "available_quantity": 5,
+        "image_url": "https://i.ibb.co/s95B41wk/book8.jpg"
+    },
+    {
+        "id": 9,
+        "title": "A Brief History of Time",
+        "author": "Stephen Hawking",
+        "description": "An overview of cosmology and the universe explained simply.",
+        "category": "Science",
+        "available_quantity": 4,
+        "image_url": "https://i.ibb.co/2LkqfLg/book9.jpg"
+    },
+    {
+        "id": 10,
+        "title": "The Theory of Everything",
+        "author": "Stephen Hawking",
+        "description": "Insights into the origin and fate of the universe.",
+        "category": "Science",
+        "available_quantity": 6,
+        "image_url": "https://i.ibb.co/1YGszG9n/book10.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Harry Potter and the Sorcerer's Stone",
+        "author": "J.K. Rowling",
+        "description": "A young wizard's journey begins at Hogwarts.",
+        "category": "Story",
+        "available_quantity": 14,
+        "image_url": "https://i.ibb.co/ZQfMvBj/book11.jpg"
+    },
+    {
+        "id": 12,
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "description": "A fantasy adventure of Bilbo Baggins in Middle-earth.",
+        "category": "Story",
+        "available_quantity": 8,
+        "image_url": "https://i.ibb.co/TBGJ6N8X/book12.jpg"
+    }
+]
