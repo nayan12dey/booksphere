@@ -46,9 +46,9 @@
     },
     {
         "id": 6,
-        "title": "Atomic Habits",
-        "author": "James Clear",
-        "description": "A guide to building good habits and breaking bad ones.",
+        "title": "The Selfish Gene",
+        "author": "Richard Dawkins",
+        "description": "An influential book explaining evolution through gene-centered theory.",
         "category": "Science",
         "available_quantity": 11,
         "image_url": "https://i.ibb.co/FkB6fDkP/book6.jpg"
