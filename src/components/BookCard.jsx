@@ -8,7 +8,7 @@ const BookCard = ({ book }) => {
     console.log(book);
     return (
         <div>
-            <div className="card bg-base-100 w-[80%] shadow-sm p-4 mx-auto border border-gray-300 h-full hover:shadow-lg transition duration-300">
+            <div className="card bg-base-100 w-[95%] shadow-sm p-4 mx-auto border border-gray-300 h-full hover:shadow-lg transition duration-300">
                 <figure className='bg-base-300 p-4 rounded-xl'>
                     <img className='rounded-xl h-[250px]'
                         src={book.image_url}
