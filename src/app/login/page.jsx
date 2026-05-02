@@ -42,7 +42,7 @@ const LoginPage = () => {
                     <button className='btn bg-mist-700 text-white w-full'>Login</button>
                 </form>
 
-                <p className='mt-4 text-sm text-center'>Don't Have An Account ? <Link href={'/register'} className='text-red-500 hover:text-red-600'>Register</Link></p>
+                <p className='mt-4 text-sm text-center'>Don`&apos;`t Have An Account ? <Link href={'/register'} className='text-red-500 hover:text-red-600'>Register</Link></p>
             </div>
         </div>
     );
