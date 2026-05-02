@@ -25,7 +25,7 @@ const RegisterPage = () => {
             email: email, // required
             password: password, // required
             image: photo,
-            callbackURL: "/",
+            // callbackURL: "/",
         })
 
         console.log({regData, error})
