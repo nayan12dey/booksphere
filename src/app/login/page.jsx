@@ -1,15 +1,19 @@
 "use client"
-
-
 import Link from 'next/link';
 import React from 'react';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useForm } from 'react-hook-form';
 
 const LoginPage = () => {
 
-    const handleLoginFunc = (e) => {
-        e.preventDefault();
-        
+    const {
+        register, 
+        handleSubmit,
+        formState: {errors}
+    } = useForm();
+
+
+    const handleLoginFunc = (data) => {
+        console.log("data", data)       
     }
 
 
@@ -23,15 +27,15 @@ const LoginPage = () => {
                 <form className='space-y-4' onSubmit={handleSubmit(handleLoginFunc)}>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend text-lg">Email address</legend>
-                        <input type="text" className="input" placeholder="Enter your email address" name='email'/>
+                        <input type="email" className="input" placeholder="Enter your email address"  {...register("email", {required: "Email field is required"})}/>
                         {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
                     </fieldset>
 
 
                     <fieldset className="fieldset relative">
                         <legend className="fieldset-legend text-lg">Password</legend>
-                        <input type={isShowPassword ? "text" : "password"} className="input" placeholder="Enter your password" name='password'/>
-                        <span className='absolute right-2 top-5 cursor-pointer' onClick={() => SetIsShowPassword(!isShowPassword)}>{isShowPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}</span>
+                        <input className="input" placeholder="Enter your password" {...register("password", { required: "Password field is required" })} />
+                        
                         {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
                     </fieldset>
 
