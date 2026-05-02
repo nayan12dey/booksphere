@@ -1,7 +1,9 @@
 "use client"
+import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 
 const RegisterPage = () => {
@@ -13,8 +15,25 @@ const RegisterPage = () => {
     } = useForm();
 
 
-    const handleRegisterFunc = (data) => {
+    const handleRegisterFunc = async (data) => {
         console.log("data", data)
+        const {email, name, photo, password} = data;
+        console.log(email, name, photo, password);
+
+        const {data: regData, error} = await authClient.signUp.email({
+            name: name, // required
+            email: email, // required
+            password: password, // required
+            image: photo,
+            callbackURL: "/",
+        })
+
+        console.log({regData, error})
+
+        if(error){
+            toast.error(error.message);
+        }
+
     }
 
 
@@ -34,6 +53,13 @@ const RegisterPage = () => {
 
 
                     <fieldset className="fieldset">
+                        <legend className="fieldset-legend text-lg">Email address</legend>
+                        <input type="email" className="input" placeholder="Enter your email address"  {...register("email", { required: "Email field is required" })} />
+                        {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
+                    </fieldset>
+
+
+                    <fieldset className="fieldset">
                         <legend className="fieldset-legend text-lg">Photo URL</legend>
                         <input type="text" className="input" placeholder="Enter your photo url"  {...register("photo", { required: "Photo URL field is required" })} />
                         {errors.photo && <p className='text-red-500'>{errors.photo.message}</p>}
@@ -42,7 +68,7 @@ const RegisterPage = () => {
 
                     <fieldset className="fieldset relative">
                         <legend className="fieldset-legend text-lg">Password</legend>
-                        <input className="input" placeholder="Enter your password" {...register("password", { required: "Password field is required" })} />
+                        <input type='password' className="input" placeholder="Enter your password" {...register("password", { required: "Password field is required" })} />
 
                         {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
                     </fieldset>
@@ -50,7 +76,7 @@ const RegisterPage = () => {
                     <button className='btn bg-mist-700 text-white w-full'>Register </button>
                 </form>
 
-                
+
             </div>
         </div>
     );

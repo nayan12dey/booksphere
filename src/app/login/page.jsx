@@ -1,19 +1,35 @@
 "use client"
+import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const LoginPage = () => {
 
     const {
-        register, 
+        register,
         handleSubmit,
-        formState: {errors}
+        formState: { errors }
     } = useForm();
 
 
-    const handleLoginFunc = (data) => {
-        console.log("data", data)       
+    const handleLoginFunc = async(data) => {
+        console.log("data", data)
+
+
+        const { data: logdata, error } = await authClient.signIn.email({
+            email: data.email, // required
+            password: data.password, // required
+            rememberMe: true,
+            callbackURL: "/",
+        });
+
+        console.log({logdata, error})
+
+        if(error){
+            toast.error(error.message);
+        }
     }
 
 
@@ -27,15 +43,15 @@ const LoginPage = () => {
                 <form className='space-y-4' onSubmit={handleSubmit(handleLoginFunc)}>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend text-lg">Email address</legend>
-                        <input type="email" className="input" placeholder="Enter your email address"  {...register("email", {required: "Email field is required"})}/>
+                        <input type="email" className="input" placeholder="Enter your email address"  {...register("email", { required: "Email field is required" })} />
                         {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
                     </fieldset>
 
 
                     <fieldset className="fieldset relative">
                         <legend className="fieldset-legend text-lg">Password</legend>
-                        <input className="input" placeholder="Enter your password" {...register("password", { required: "Password field is required" })} />
-                        
+                        <input type='password' className="input" placeholder="Enter your password" {...register("password", { required: "Password field is required" })} />
+
                         {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
                     </fieldset>
 

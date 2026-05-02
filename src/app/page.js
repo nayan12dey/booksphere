@@ -5,6 +5,7 @@ import FeaturedBooks from "@/components/FeaturedBooks";
 import Testimonials from "@/components/Testimonials";
 
 import Image from "next/image";
+import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <FeaturedBooks></FeaturedBooks>
         <BookStats></BookStats>
         <Testimonials></Testimonials>
+        
     </div>
   );
 }
