@@ -20,7 +20,6 @@ const FeaturedBooks = async () => {
             <div className="grid grid-cols-4 mx-auto">
                 {
                     topBooks.map(book => <BookCard key={book.id} book={book}>
-                           {book.title}
                     </BookCard>)
                 }
             </div>

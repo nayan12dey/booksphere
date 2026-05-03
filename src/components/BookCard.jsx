@@ -1,4 +1,6 @@
 
+
+import Image from 'next/image';
 import React from 'react';
 import { BiStar } from 'react-icons/bi';
 import { FaRegStar } from 'react-icons/fa';
@@ -9,13 +11,16 @@ const BookCard = ({ book }) => {
     return (
         <div>
             <div className="card bg-base-100 w-[95%] shadow-sm p-4 mx-auto border border-gray-300 h-full hover:shadow-lg transition duration-300">
-                <figure className='bg-base-300 p-4 rounded-xl'>
-                    <img className='rounded-xl h-[250px]'
+                <figure className='bg-base-300 p-4 rounded-xl relative w-full aspect-square'>
+                    <Image
                         src={book.image_url}
-                        alt={book.title} />
+                        alt={book.title}
+                        fill
+                        className='rounded-xl object-contain p-5'
+                        />
                 </figure>
                 <div className="card-body">
-                    
+
                     <h2 className="card-title text-xl">
                         {book.title}
                     </h2>
