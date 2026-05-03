@@ -1,12 +1,17 @@
 "use client"
 import { authClient } from '@/lib/auth-client';
+import { Button } from '@heroui/react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { GrGoogle } from 'react-icons/gr';
 import { toast } from 'react-toastify';
 
 
 const RegisterPage = () => {
+
+    const router = useRouter();
 
     const {
         register,
@@ -17,10 +22,10 @@ const RegisterPage = () => {
 
     const handleRegisterFunc = async (data) => {
         console.log("data", data)
-        const {email, name, photo, password} = data;
+        const { email, name, photo, password } = data;
         console.log(email, name, photo, password);
 
-        const {data: regData, error} = await authClient.signUp.email({
+        const { data: regData, error } = await authClient.signUp.email({
             name: name, // required
             email: email, // required
             password: password, // required
@@ -28,14 +33,23 @@ const RegisterPage = () => {
             // callbackURL: "/",
         })
 
-        console.log({regData, error})
+        console.log({ regData, error })
 
-        if(error){
+        if (error) {
             toast.error(error.message);
+        }
+        else {
+            router.push("/login")
         }
 
     }
 
+
+    const handleGoogleSignUp = async () => {
+        await authClient.signIn.social({
+            provider: "google"
+        })
+    }
 
 
     return (
@@ -76,6 +90,9 @@ const RegisterPage = () => {
                     <button className='btn bg-mist-700 text-white w-full'>Register </button>
                 </form>
 
+                <p className='text-center my-2'>Or</p>
+                <Button variant='outline' className="w-full" onClick={handleGoogleSignUp}><GrGoogle></GrGoogle> Register with Google</Button>
+
 
             </div>
         </div>
@@ -83,3 +100,6 @@ const RegisterPage = () => {
 };
 
 export default RegisterPage;
+
+
+

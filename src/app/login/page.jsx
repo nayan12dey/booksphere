@@ -1,8 +1,11 @@
 "use client"
 import { authClient } from '@/lib/auth-client';
+import { Button } from '@heroui/react';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { BsGoogle } from 'react-icons/bs';
+import { GrGoogle } from 'react-icons/gr';
 import { toast } from 'react-toastify';
 
 const LoginPage = () => {
@@ -33,6 +36,13 @@ const LoginPage = () => {
     }
 
 
+    const handleGoogleSignIn = async() => {
+        await authClient.signIn.social({
+            provider: "google"
+        })
+    }
+
+
 
 
     return (
@@ -58,7 +68,11 @@ const LoginPage = () => {
                     <button className='btn bg-mist-700 text-white w-full'>Login</button>
                 </form>
 
-                <p className='mt-4 text-sm text-center'>Don`&apos;`t Have An Account ? <Link href={'/register'} className='text-red-500 hover:text-red-600'>Register</Link></p>
+                <p className='text-center my-2'>Or</p>
+                <Button variant='outline' className="w-full" onClick={handleGoogleSignIn}><GrGoogle></GrGoogle> Login with Google</Button>
+
+                <p className='mt-4 text-sm text-center'>Don<span>&apos;t</span> An Account ? <Link href={'/register'} className='text-red-500 hover:text-red-600'>Register</Link></p>
+
             </div>
         </div>
     );
