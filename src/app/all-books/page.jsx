@@ -27,7 +27,7 @@ const AllBooksPage =  () => {
             <h1 className='text-4xl font-bold m-3'>All Books</h1>
 
 
-            <SearchField name="search">
+            <SearchField name="search" className="w-[50%]">
                 <Label>Search Books</Label>
                 <SearchField.Group>
                     <SearchField.SearchIcon />
