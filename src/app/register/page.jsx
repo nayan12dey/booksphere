@@ -93,6 +93,7 @@ const RegisterPage = () => {
                 <p className='text-center my-2'>Or</p>
                 <Button variant='outline' className="w-full" onClick={handleGoogleSignUp}><GrGoogle></GrGoogle> Register with Google</Button>
 
+                <p className='mt-4 text-sm text-center'>Already registered ? <Link href={'/login'} className='text-blue-500 hover:text-blue-700'>Login</Link></p>
 
             </div>
         </div>
