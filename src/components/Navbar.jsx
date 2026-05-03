@@ -6,6 +6,7 @@ import { Avatar, Button } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { BiUser } from 'react-icons/bi';
 
 const Navbar = () => {
 
@@ -15,6 +16,9 @@ const Navbar = () => {
 
     console.log("session user", user)
 
+    const handleSignOut = async() => {
+        await authClient.signOut()
+    }
 
 
     return (
@@ -51,8 +55,8 @@ const Navbar = () => {
                     {!user && <Link href={"/login"}><Button variant='danger'>Login</Button></Link>}
 
                     {user && <div className='flex items-center gap-5'>
-                        <p>{user.name}</p>
-                        <Link href={"/login"}><Button variant='danger'>Logout</Button></Link>
+                        <p className='flex items-center gap-1'><BiUser></BiUser> {user.name}</p>
+                        <Link href={"/login"}><Button variant='danger' onClick={handleSignOut}>Logout</Button></Link>
                     </div>}
                 </div>
             </nav>
