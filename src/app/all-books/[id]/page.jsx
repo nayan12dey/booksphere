@@ -1,7 +1,7 @@
 
 
 
-const BooksDetailsPage = async ({ params }) => {
+const BookDetailsPage = async ({ params }) => {
 
     const { id } = await params;
     console.log("id", id);
@@ -71,4 +71,4 @@ const BooksDetailsPage = async ({ params }) => {
     );
 };
 
-export default BooksDetailsPage;
+export default BookDetailsPage;
