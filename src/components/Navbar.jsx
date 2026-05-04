@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { BiUser } from 'react-icons/bi';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
 

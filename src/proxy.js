@@ -22,3 +22,8 @@ export async function proxy(request) {
 export const config = {
   matcher: ["/all-books/:path"],
 }
+
+
+
+// Single Book Details Page(PRIVATE ROUTE) er toast ta confusion --> support
+
