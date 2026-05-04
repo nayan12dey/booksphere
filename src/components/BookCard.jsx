@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React from 'react';
 import { BiStar } from 'react-icons/bi';
 import { FaRegStar } from 'react-icons/fa';
+import Category from './Category';
 
 const BookCard = ({ book }) => {
 
@@ -14,6 +15,7 @@ const BookCard = ({ book }) => {
 
     return (
         <div>
+
             <div className="card bg-base-100 w-[95%] shadow-sm p-4 mx-auto border border-gray-300 h-full hover:shadow-lg transition duration-300">
                 <figure className='bg-base-300 p-4 rounded-xl relative w-full aspect-square'>
                     <Image
