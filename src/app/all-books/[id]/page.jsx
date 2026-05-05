@@ -1,4 +1,6 @@
 
+import BorrowButton from "@/components/BorrowButton";
+
 
 
 const BookDetailsPage = async ({ params }) => {
@@ -15,7 +17,10 @@ const BookDetailsPage = async ({ params }) => {
 
 
 
+
     return (
+
+
         <div className="p-10">
             <div className="card bg-base-100 shadow-xl rounded-2xl overflow-hidden mt-6 border border-base-200 lg:card-side">
 
@@ -62,9 +67,7 @@ const BookDetailsPage = async ({ params }) => {
                     </div>
 
                     <div className="card-actions justify-end mt-2">
-                        <button className="btn btn-primary">
-                            Borrow This Book
-                        </button>
+                        <BorrowButton></BorrowButton>
                     </div>
 
                 </div>
