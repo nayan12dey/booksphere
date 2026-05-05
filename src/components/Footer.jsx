@@ -6,7 +6,7 @@ import React from 'react';
 const Footer = () => {
     return (
 
-        <footer className="bg-base-300 text-base-content  ">
+        <footer className="bg-base-300 text-base-content">
             <div className='footer sm:footer-horizontal p-10'>
                 <nav className='max-w-xs'>
                     <Link href={"/"} className='flex gap-2 items-center'>
