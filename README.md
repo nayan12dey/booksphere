@@ -1,9 +1,5 @@
 # BookSphere – Digital Library Web App
 
-##  Live Site
-🔗https://booksphere-swart.vercel.app/
-
----
 
 ## Project Overview
 
@@ -20,6 +16,12 @@ The goal of this project is to:
 - Provide a smooth book browsing and borrowing experience
 - Implement secure authentication and protected routes
 - Build a fully responsive modern UI
+
+---
+
+
+##  Live Site
+🔗https://booksphere-swart.vercel.app/
 
 ---
 
@@ -57,7 +59,26 @@ The goal of this project is to:
 ###  UI/UX
 - Fully responsive (Mobile, Tablet, Desktop)
 - Unique modern design
-- Smooth animations (Animate.css / Swiper / React Spring)
+- Smooth animations (Swiper)
+
+---
+
+##  NPM Packages Used
+
+- better-auth   
+- mongodb  
+- next  
+- react  
+- react-dom  
+- tailwindcss  
+- daisyui  
+- heroui
+- react-hook-form  
+- react-toastify  
+- sweetalert2  
+- swiper  
+- react-fast-marquee  
+- react-icons  
 
 ---
 
