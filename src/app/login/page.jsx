@@ -33,7 +33,7 @@ const LoginPage = () => {
         if(error){
             toast.error(error.message);
         }
-    }
+    }  
 
 
     const handleGoogleSignIn = async() => {

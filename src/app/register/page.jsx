@@ -50,7 +50,7 @@ const RegisterPage = () => {
             provider: "google"
         })
     }
-
+  
 
     return (
 
