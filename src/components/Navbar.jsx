@@ -5,8 +5,8 @@ import { authClient } from '@/lib/auth-client';
 import { Avatar, Button } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
-import { BiUser } from 'react-icons/bi';
+import React, { useState } from 'react';
+import { BiMenu, BiUser, BiX } from 'react-icons/bi';
 import { toast } from 'react-toastify';
 
 const Navbar = () => {
@@ -17,9 +17,11 @@ const Navbar = () => {
 
     console.log("session user", user)
 
-    const handleSignOut = async() => {
+    const handleSignOut = async () => {
         await authClient.signOut()
     }
+
+    const [isOpen, setIsOpen] = useState(false);
 
 
     return (
@@ -39,7 +41,7 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-                <ul className="flex items-center gap-5 text-sm">
+                <ul className="hidden md:flex items-center gap-5 text-sm">
                     <li>
                         <Link href={"/"}>Home</Link>
                     </li>
@@ -52,7 +54,7 @@ const Navbar = () => {
 
                 </ul>
 
-                <div className="flex gap-4">
+                <div className="hidden md:flex gap-4">
                     {!user && <Link href={"/login"}><Button variant='danger'>Login</Button></Link>}
 
                     {user && <div className='flex items-center gap-5'>
@@ -60,7 +62,42 @@ const Navbar = () => {
                         <Link href={"/login"}><Button variant='danger' onClick={handleSignOut}>Logout</Button></Link>
                     </div>}
                 </div>
+
+                <button className='md:hidden text-2xl' onClick={() => setIsOpen(!isOpen)}>
+                    {isOpen ? <BiX></BiX> : <BiMenu></BiMenu>}
+                </button>
             </nav>
+
+            {
+                isOpen && (
+                    <div className='md:hidden flex flex-col items-end gap-4 pb-4'>
+                        <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
+                        <Link href="/all-books" onClick={() => setIsOpen(false)}>All Books</Link>
+                        <Link href="/profile" onClick={() => setIsOpen(false)}>My Profile</Link>
+                        {!user && (
+                            <Link href="/login">
+                                <Button variant="danger">
+                                    Login
+                                </Button>
+                            </Link>
+                        )}
+
+                        {user && (
+                            <>
+                                <p className="flex items-center gap-1">
+                                    <BiUser /> {user.name}
+                                </p>
+                                <Button
+                                    variant="danger"
+                                    onClick={handleSignOut}
+                                >
+                                    Logout
+                                </Button>
+                            </>
+                        )}
+                    </div>
+                )
+            }
         </div>
     );
 };
