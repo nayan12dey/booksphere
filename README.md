@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BookSphere – Digital Library Web App
 
-## Getting Started
+##  Live Site
+🔗https://booksphere-swart.vercel.app/
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**BookSphere** is a modern, responsive digital library web application built with **Next.js**, **Tailwind CSS**, and **MongoDB**. It transforms the traditional library experience into a seamless online platform where users can explore, search, and borrow books digitally.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The application focuses on **performance, security, and user experience**, leveraging **BetterAuth** for authentication and protected routes.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+##  Purpose
 
-To learn more about Next.js, take a look at the following resources:
+The goal of this project is to:
+- Digitize the traditional library system
+- Provide a smooth book browsing and borrowing experience
+- Implement secure authentication and protected routes
+- Build a fully responsive modern UI
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+##  Key Features
 
-## Deploy on Vercel
+###  Authentication (BetterAuth)
+- Email & Password Login/Register
+- Google Social Login
+- Secure private routes
+- Error handling with toast messages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+###  Home Page
+- Hero banner: *"Find Your Next Read"*
+- Marquee for announcements
+- Featured Books section (Top 4)
+- Additional custom sections (e.g., testimonials, categories)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+###  Book Management
+- View all books
+- Search books by title
+- Filter by category:
+  - Story
+  - Tech
+  - Science
+
+###  Book Details (Private Route)
+- Full book information
+- Available quantity display
+- Borrow functionality
+
+###  User Profile (Private Route)
+- View user information
+- Update name and profile image
+
+###  UI/UX
+- Fully responsive (Mobile, Tablet, Desktop)
+- Unique modern design
+- Smooth animations (Animate.css / Swiper / React Spring)
+
+---
+
+##  Tech Stack
+
+- **Frontend:** Next.js (App Router)
+- **Styling:** Tailwind CSS + DaisyUI / HeroUI
+- **Authentication:** BetterAuth
+- **Database:** MongoDB
