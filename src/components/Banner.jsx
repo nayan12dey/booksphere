@@ -8,9 +8,9 @@ const Banner = () => {
         <div className="bg-[url('https://cdn.pixabay.com/photo/2023/02/21/01/19/library-7803315_1280.jpg')] h-[70vh] w-full bg-cover bg-no-repeat bg-center flex items-center rounded-lg shadow-2xl my-10">
 
             <div className="w-full h-full rounded-lg bg-black/50 flex items-center">
-                <div className="max-w-7xl mx-auto px-6 text-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 text-white">
 
-                    <h1 className="text-4xl md:text-6xl font-bold mb-4 max-w-2xl">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 max-w-2xl text-center">
                         Find Your Next Read
                     </h1>
 

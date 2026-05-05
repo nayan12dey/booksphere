@@ -36,7 +36,7 @@ const AllBooksPage = () => {
         <div>
             <h1 className='text-4xl font-bold m-3'>All Books</h1>
 
-            <SearchField name="search" className="w-[50%]">
+            <SearchField name="search" className="w-[70%] md:w-[50%]">
                 <Label>Search Books</Label>
                 <SearchField.Group>
                     <SearchField.SearchIcon />
@@ -46,10 +46,10 @@ const AllBooksPage = () => {
             </SearchField>
 
 
-            <div className='flex'>
+            <div className='flex flex-col lg:flex-row'>
                 <Category categories={categories} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}></Category>
 
-                <div className='flex-1 grid grid-cols-3 my-10 gap-6'>
+                <div className='flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-10 gap-6'>
                     {
                         filteredBooks.map(book => <BookCard key={book.id} book={book}></BookCard>)
                     }
