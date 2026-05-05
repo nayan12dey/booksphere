@@ -35,7 +35,7 @@ The goal of this project is to:
 - Hero banner: *"Find Your Next Read"*
 - Marquee for announcements
 - Featured Books section (Top 4)
-- Additional custom sections (e.g., testimonials, feedback)
+- Additional custom sections (e.g., stats, feedback)
 
 ###  Book Management
 - View all books
